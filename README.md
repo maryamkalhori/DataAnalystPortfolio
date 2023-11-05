@@ -22,7 +22,7 @@ I am adept at creating interactive and insightful dashboards and reports using P
   - Bachelor of mathematics: Sept 2010- Aug 2015, K. N. Toosi University of Technology
 ## Certificate:
 ## Contacts:
-- kalhori.maryam1991@gmail.com
-- https://www.linkedin.com/in/maryamkalhori/
+- Email: kalhori.maryam1991@gmail.com
+- Linkedin: https://www.linkedin.com/in/maryamkalhori/
 
     
