@@ -1,3 +1,33 @@
+/*
+➕Table 1: Customers
+Columns: customer_id (INT), name (VARCHAR(50)), email (VARCHAR(50)), phone_number (VARCHAR(20))
+Primary Key: customer_id
+
+➕Table 2: Orders
+Columns: order_id (INT), customer_id (INT), order_date (DATE)
+Primary Key: order_id
+Foreign Key: customer_id references Customers(customer_id)
+
+➕Table 3: OrderItems
+Columns: order_item_id (INT), order_id (INT), product_id (INT), quantity (INT)
+Primary Key: order_item_id
+Foreign Key: order_id references Orders(order_id)
+
+
+➕Table 4: Products
+Columns: id (INT), name (VARCHAR(50)), category (VARCHAR(50)), price (DECIMAL(10,2))
+Primary Key: id
+
+
+The script also includes code to generate random data and fill the tables:
+⛔A table called "IDs" is created to generate a list of row IDs.
+⛔The "Customers" table is filled with 5000 rows of randomly generated customer data.
+⛔The "Orders" table is filled with 35000 rows of randomly generated order data.
+⛔The "Products" table is filled with 20 rows of predefined product data.
+⛔The "OrderItems" table is filled with a random number of rows (between 1 and 10) for each order, linking to random products.
+*/
+
+
 --Table 1: Customers
 CREATE TABLE Customers (
     customer_id INT PRIMARY KEY,
@@ -30,6 +60,7 @@ price DECIMAL(10,2)
 );
 ---------------------------------------------------------------------
 --Fill tables with random data
+--------------------------------------------------------------------
 --First we generate ID table
 CREATE TABLE IDs (
     row_id INTEGER PRIMARY KEY
