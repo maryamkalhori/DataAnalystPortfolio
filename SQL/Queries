@@ -1,0 +1,119 @@
+--❓ find Null values
+SELECT 
+  SUM(
+    CASE WHEN o.customer_id IS NULL THEN 1 ELSE 0 END
+  ) AS null_count_customer_id, 
+  SUM(
+    CASE WHEN o.order_date IS NULL THEN 1 ELSE 0 END
+  ) AS null_order_date, 
+  SUM(
+    CASE WHEN o.order_id IS NULL THEN 1 ELSE 0 END
+  ) AS null_order_id 
+FROM 
+  Orders o;
+
+
+--❓ find the total number of orders, customers, products, and order items in the database:
+SELECT (SELECT Count(*)
+        FROM   orders)     AS total_orders,
+       (SELECT Count(*)
+        FROM   customers)  AS total_customers,
+       (SELECT Count(*)
+        FROM   products)   AS total_products,
+       (SELECT Count(*)
+        FROM   orderitems) AS total_order_items; 
+
+--❓  find  the average, minimum, and maximum order amount, order quantity, and product price:
+
+SELECT Avg(o.total_amount)   AS avg_order_amount,
+       Min(o.total_amount)   AS min_order_amount,
+       Max(o.total_amount)   AS max_order_amount,
+       Avg(o.total_quantity) AS avg_order_quantity,
+       Min(o.total_quantity) AS min_order_quantity,
+       Max(o.total_quantity) AS max_order_quantity,
+       Avg(p.price)          AS avg_product_price,
+       Min(p.price)          AS min_product_price,
+       Max(p.price)          AS max_product_price
+FROM   (SELECT order_id,
+               Sum(quantity * price) AS total_amount,
+               Sum(quantity)         AS total_quantity
+        FROM   orderitems oi
+               JOIN products p
+                 ON oi.product_id = p.id
+        GROUP  BY order_id) o
+       JOIN products p
+         ON o.product_id = p.id; 
+
+
+--❓ top 10 most popular products by sales and quantity, you can use the following query:
+
+SELECT p.name,
+       p.category,
+       p.price,
+       Sum(oi.quantity)           AS total_quantity,
+       Sum(oi.quantity * p.price) AS total_sales
+FROM   orderitems oi
+       JOIN products p
+         ON oi.product_id = p.id
+GROUP  BY p.id
+ORDER  BY total_sales DESC,
+          total_quantity DESC
+LIMIT  10; 
+
+--❓ find the distribution of orders by month, year, and weekday:
+
+SELECT Strftime('%m', order_date) AS month,
+       Strftime('%Y', order_date) AS year,
+       Strftime('%w', order_date) AS weekday,
+       Count(*)                   AS order_count
+FROM   orders
+GROUP  BY month,
+          year,
+          weekday
+ORDER  BY year,
+          month,
+          weekday; 
+
+--❓ find out the customer retention rate by cohort:
+
+WITH cohorts
+     AS (SELECT customer_id,
+                Min(order_date) AS first_order_date
+         FROM   orders
+         GROUP  BY customer_id),
+     orders
+     AS (SELECT customer_id,
+                order_date,
+                Strftime('%Y-%m', order_date) AS order_month
+         FROM   orders),
+     cohort_orders
+     AS (SELECT c.customer_id,
+                c.first_order_date,
+                Strftime('%Y-%m', c.first_order_date) AS cohort_month,
+                o.order_date,
+                o.order_month
+         FROM   cohorts c
+                JOIN orders o
+                  ON c.customer_id = o.customer_id),
+     cohort_sizes
+     AS (SELECT cohort_month,
+                Count(DISTINCT customer_id) AS cohort_size
+         FROM   cohorts
+         GROUP  BY cohort_month),
+     retention
+     AS (SELECT co.cohort_month,
+                co.order_month,
+                Count(DISTINCT co.customer_id) AS active_customers
+         FROM   cohort_orders co
+         GROUP  BY co.cohort_month,
+                   co.order_month)
+SELECT r.cohort_month,
+       r.order_month,
+       r.active_customers,
+       cs.cohort_size,
+       Round(r.active_customers * 100.0 / cs.cohort_size, 2) AS retention_rate
+FROM   retention r
+       JOIN cohort_sizes cs
+         ON r.cohort_month = cs.cohort_month
+ORDER  BY r.cohort_month,
+          r.order_month; 
