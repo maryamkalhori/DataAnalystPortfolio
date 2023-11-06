@@ -52,7 +52,7 @@ CREATE TABLE OrderItems (
     FOREIGN KEY (order_id) REFERENCES Orders(order_id)
 );
 --Table 4: Products
-CREATE TABLE product (
+CREATE TABLE Products (
 id INT PRIMARY KEY,
 name VARCHAR(50),
 category VARCHAR(50),
