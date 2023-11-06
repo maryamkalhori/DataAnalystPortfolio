@@ -94,7 +94,7 @@ date('now', '-' || CAST(FLOOR(random() % 365) + 1 AS TEXT) || ' days')) as order
 FROM IDs
 limit 35000;
 ---------------------------------------------------------------------
-INSERT INTO product (id, name, category, price) VALUES
+INSERT INTO Products (id, name, category, price) VALUES
 (1, 'Milk', 'Groceries', 2.99),
 (2, 'Eggs', 'Groceries', 3.49),
 (3, 'Bread', 'Groceries', 1.99),
@@ -121,6 +121,7 @@ SELECT 1 AS num
 UNION ALL
 SELECT num + 1 FROM numbers WHERE num <= 10
 )
+INSERT INTO OrderItems (order_item_id, order_id, product_id, quantity)
 SELECT 
     ROW_NUMBER() OVER (ORDER BY random()) AS order_item_id,
     o.order_id,
