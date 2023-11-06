@@ -7,20 +7,18 @@ I am adept at creating interactive and insightful dashboards and reports using P
 ## Table oF Content
 - [About](https://github.com/maryamkalhori/DataAnalystPortfolio/edit/main/README.md#about)
 - Portfolio Projects
-  - Power BI dashboards
+  - [Power BI dashboards](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/Power%20BI%20Dashboards)
     - SuperStore Dashboard
     - Airline satisfaction Dashboard
-  - Python Projects
-    - A/B testing
-    - RFM Segmentation
-  - SQL
-- Education
-- Certificate
-- Contacts
+  - [Python Projects](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/Python%20Projects)
+    - [A/B testing](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/Python%20Projects/AB%20testing)
+    - [RFM Segmentation](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/Python%20Projects/RFM%20Segmentation)
+  - [SQL](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/SQL)
+- [Education](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/main#education)
+- [Contacts](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/main#contacts)
 ## Education:
   - Master of Industrial Management: Sept 2015- Feb 2018, Kharazmi University
   - Bachelor of mathematics: Sept 2010- Aug 2015, K. N. Toosi University of Technology
-## Certificate:
 ## Contacts:
 - Email: kalhori.maryam1991@gmail.com
 - Linkedin: https://www.linkedin.com/in/maryamkalhori/
