@@ -1,4 +1,4 @@
-Superstore Supermarket Dashboard
+__Superstore Supermarket Dashboard__
 
 https://www.novypro.com/project/superstore-supermarket
 
