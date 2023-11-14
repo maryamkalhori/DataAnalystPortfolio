@@ -1,6 +1,6 @@
 __Airline Passengers Satisfaction__
 
-https://app.powerbi.com/view?r=eyJrIjoiZDVhMGY3MzMtOWUxYi00MzljLWI0OWEtMWI3ZDIyZGJjNGNiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9
+https://www.novypro.com/project/airline-passenger-satisfaction-7
 
 The dashboard is designed to analyze and visualize factors impacting airline passenger satisfaction. 
 
