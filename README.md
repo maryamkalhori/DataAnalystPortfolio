@@ -14,6 +14,7 @@ I am adept at creating interactive and insightful dashboards and reports using P
     - [A/B testing](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/Python%20Projects/AB%20testing)
     - [RFM Segmentation](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/Python%20Projects/RFM%20Segmentation)
     - [EDA](https://github.com/maryamkalhori/DataAnalystPortfolio/blob/main/Python%20Projects/EDA/house%20pricing.ipynb)
+    - [Walmart Sales Forcast](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/main/Python%20Projects/Walmert%20Sales%20Forecast)
   - [SQL](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/SQL)
 - [Education](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/main#education)
 - [Contacts](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/main#contacts)
