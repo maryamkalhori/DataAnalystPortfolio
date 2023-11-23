@@ -7,9 +7,10 @@ I am adept at creating interactive and insightful dashboards and reports using P
 ## Table oF Content
 - [About](https://github.com/maryamkalhori/DataAnalystPortfolio/edit/main/README.md#about)
 - Portfolio Projects
-  - [Power BI dashboards](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/Power%20BI%20Dashboards)
+  - [Power BI dashboards](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/main/Power%20BI%20Dashboards)
     - [SuperStore Dashboard](https://github.com/maryamkalhori/DataAnalystPortfolio/blob/main/Power%20BI%20Dashboards/Superstore%20Dashboard%20Description.md)
     - [Airline Passengers Satisfaction Dashboard](https://github.com/maryamkalhori/DataAnalystPortfolio/blob/main/Power%20BI%20Dashboards/Airline%20Passengers%20Satisfaction%20Description.md)
+    - [Sales Dashboard](https://github.com/maryamkalhori/DataAnalystPortfolio/blob/main/Power%20BI%20Dashboards/Sales%20Dashboard.md)
   - [Python Projects](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/Python%20Projects)
     - [A/B testing](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/Python%20Projects/AB%20testing)
     - [RFM Segmentation](https://github.com/maryamkalhori/DataAnalystPortfolio/tree/af08b14a194e79fc84f9c6aa035c5bab7996eeb8/Python%20Projects/RFM%20Segmentation)
